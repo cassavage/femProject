@@ -10,12 +10,11 @@ type Application struct {
 }
 
 func NewApplication() (*Application, error) {
-		logger: log.New(os.Stdout, "", log.Ldate|log.Ltime),
+	logger := log.New(os.Stdout, "", log.Ldate|log.Ltime)
 
-		app := &Application{
-			Logger: logger,
-		}
-
-		return app, nil
+	app := &Application{
+		Logger: logger,
 	}
+
+	return app, nil
 }
